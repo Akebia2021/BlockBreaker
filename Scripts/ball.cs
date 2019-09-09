@@ -16,6 +16,7 @@ public class ball : MonoBehaviour
     //state
     Vector2 paddleToBallVector;
     bool hasStarted = false;
+    private GameSession gameSession;
 
     //キャッシュされたコンポーネントへのリファレンス
     AudioSource myAudioSource;
@@ -28,6 +29,7 @@ public class ball : MonoBehaviour
         paddleToBallVector = transform.position - paddle1.transform.position;
         myAudioSource = GetComponent<AudioSource>();
         myrigidbody = GetComponent<Rigidbody2D>();
+        gameSession = GameObject.FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,11 @@ public class ball : MonoBehaviour
             LaunchOnMouseClick();
 
         }
+        if (gameSession.isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        
 
     }
 

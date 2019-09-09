@@ -22,13 +22,21 @@ public class paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //マウスの生の位置を取得し、Screensizeで割って、カメラサイズをかける
-        mouseXPos = Input.mousePosition.x / 
-            Screen.width * screenWidthInUnity;
-        //Mouse位置を制限し、YにはPaddleObject自体のTransformコンポーネントから値を取得する。
-        Vector2 paddlePos = new Vector2( Mathf.Clamp(getXpos(),min, max),transform.position.y);
-        //Transformコンポーネントにマウス位置をVector2型に含めたものを返す。
-        transform.position = paddlePos;
+        if(gameSession.isPaused)
+        {
+            return;
+        }
+        else
+        {
+            //マウスの生の位置を取得し、Screensizeで割って、カメラサイズをかける
+            mouseXPos = Input.mousePosition.x /
+                Screen.width * screenWidthInUnity;
+            //Mouse位置を制限し、YにはPaddleObject自体のTransformコンポーネントから値を取得する。
+            Vector2 paddlePos = new Vector2(Mathf.Clamp(getXpos(), min, max), transform.position.y);
+            //Transformコンポーネントにマウス位置をVector2型に含めたものを返す。
+            transform.position = paddlePos;
+
+        }
     }
 
     private float getXpos()

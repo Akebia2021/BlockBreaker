@@ -15,6 +15,9 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] bool isAutoPlayEnabled;
 
+    public bool isPaused { get; set; }
+
+
     void Awake()
     {
         int gameStatusCount = FindObjectsOfType<GameSession>().Length;
@@ -59,4 +62,12 @@ public class GameSession : MonoBehaviour
     {
         return isAutoPlayEnabled;
     }
+
+    public void SetAutoPlay()
+    {
+        if (isAutoPlayEnabled) isAutoPlayEnabled = false;
+        else isAutoPlayEnabled = true;
+    }
+
+    
 }

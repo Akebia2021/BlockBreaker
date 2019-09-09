@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5859566287329161009}
   - component: {fileID: 5859566287329161010}
   - component: {fileID: 5859566287329161011}
+  - component: {fileID: 3808094151137161924}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42,7 +43,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.04650232, g: 0.06877448, b: 0.103773594, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -82,3 +83,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5859566287329161020}
   m_Enabled: 1
+--- !u!114 &3808094151137161924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859566287329161020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae9071f17d5c9a40a9bda7fa3b1db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseUIPrefab: {fileID: 6371197630464329199, guid: af1029971bf9c5f41bd89cbee49d958d,
+    type: 3}
+  pauseUIInsance: {fileID: 0}

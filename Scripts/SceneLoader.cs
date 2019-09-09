@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    //Indexでいう次のシーンへ移動する
+    //Indexで次のシーンへ移動する
     public void loadNextScene()
     {
         //ActiveシーンのIndexを取得
